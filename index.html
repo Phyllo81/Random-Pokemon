@@ -2,8 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8" />
-        
-        <title>Random Pokemon</title>
+
+        <title>Random Pokémon</title>
 
         <link rel="icon" href="./assets/logo.png" type="image/x-icon">
 
@@ -11,24 +11,41 @@
     </head>
 
     <body>
-        <h1>Random Pokemon</h1>
+        <h1>Random Pokémon</h1>
 
-        <div class="generations">
-            <strong>Générations actives :</strong><br />
-            <label><input type="checkbox" value="1" checked> Gen 1</label>
-            <label><input type="checkbox" value="2" checked> Gen 2</label>
-            <label><input type="checkbox" value="3" checked> Gen 3</label>
-            <label><input type="checkbox" value="4" checked> Gen 4</label>
-            <label><input type="checkbox" value="5" checked> Gen 5</label>
-            <label><input type="checkbox" value="6" checked> Gen 6</label>
-            <label><input type="checkbox" value="7" checked> Gen 7</label>
-            <label><input type="checkbox" value="8" checked> Gen 8</label>
-            <label><input type="checkbox" value="9" checked> Gen 9</label>
+        <div class="controls">
+
+            <div class="game-selector">
+
+                <label for="gameSelect">Jeu :</label>
+                <select id="gameSelect">
+                    <option value="scarlet_violet">Écarlate / Violet</option>
+                    <option value="sword_shield">Épée / Bouclier</option>
+                    <option value="legends_arceus">Légendes Arceus</option>
+                    <option value="lets_go">Let’s Go Pikachu / Évoli</option>
+                    <option value="sun_moon">Soleil / Lune</option>
+                    <option value="x_y">X / Y</option>
+                    <option value="black_white">Noir / Blanc</option>
+                    <option value="diamond_pearl">Diamant / Perle</option>
+                    <option value="ruby_sapphire">Rubis / Saphir</option>
+                    <option value="gold_silver">Or / Argent</option>
+                    <option value="red_blue">Rouge / Bleu</option>
+                    <option value="legends_za" disabled>Légendes Z-A (à venir)</option>
+                </select>
+
+                <label class="dlc-toggle">
+                    <input type="checkbox" id="dlcToggle">
+                    Inclure les DLC
+                </label>
+
+            </div>
         </div>
 
         <br />
 
-        <button onclick="getRandomPokemon()">Lancer le tirage</button>
+        <button class="roll-btn" onclick="getRandomPokemon()">
+            Lancer le tirage
+        </button>
 
         <div class="pokemon-container" id="pokemonContainer"></div>
 
